@@ -29,7 +29,7 @@ def get_funcionario(id: int):
         session.close()
 
 @router.post("/funcionario/", tags=["Funcionário"])
-def post_funcionario(corpo: FuncionarioDB):
+def post_funcionario(corpo: Funcionario):
     try:
         session = db.Session()
         dados = FuncionarioDB(None, corpo.nome, corpo.matricula, corpo.cpf, corpo.telefone, corpo.grupo, corpo.senha)
@@ -44,7 +44,7 @@ def post_funcionario(corpo: FuncionarioDB):
 
 
 @router.put("/funcionario/{id}", tags=["Funcionário"])
-def put_funcionario(id: int, corpo: FuncionarioDB):
+def put_funcionario(id: int, corpo: Funcionario):
     try:
         session = db.Session()
         dados = session.query(FuncionarioDB).filter(FuncionarioDB.id_funcionario == id).one()
