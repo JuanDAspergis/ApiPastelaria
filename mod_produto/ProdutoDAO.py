@@ -1,8 +1,10 @@
 import db
+import security
 from mod_produto.ProdutoModel import ProdutoDB
 
+from fastapi import Depends
 from fastapi import APIRouter
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(security.verify_token), Depends(security.verify_key)])
 
 #Criando os endpoints: GET, POST, PUT, DELETE
 

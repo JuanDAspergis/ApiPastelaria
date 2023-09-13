@@ -18,6 +18,10 @@ DB_NAME = os.getenv("DB_NAME")
 #DB_USER = os.getenv("DB_USER")
 #DB_PASS = os.getenv("DB_PASS")
 
+#Segurança do Token e Key
+X_TOKEN = os.getenv("X_TOKEN")
+X_KEY = os.getenv("X_KEY")
+
 #Ajustar a STR_DATABASE
 if DB_SGDB == 'sqlite':
     STR_DATABASE = f"sqlite:///{DB_NAME}.db"

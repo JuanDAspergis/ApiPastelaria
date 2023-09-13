@@ -1,8 +1,10 @@
 import db
+import security
 from mod_funcionario.FuncionarioModel import FuncionarioDB
 
+from fastapi import Depends
 from fastapi import APIRouter
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(security.verify_token), Depends(security.verify_key)])
 
 #Criando as os endpoints: GET, POST, PUT, DELETE
 

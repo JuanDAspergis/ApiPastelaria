@@ -1,8 +1,10 @@
 import db
+import security
 from mod_cliente.ClienteModel import ClienteDB
 
+from fastapi import Depends
 from fastapi import APIRouter
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(security.verify_token), Depends (security.verify_key)])
 
 #Criar os endpoints do Cliente: GET, POST, PUT, DELETE
 
