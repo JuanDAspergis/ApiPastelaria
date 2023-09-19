@@ -4,7 +4,7 @@ x-token: TokenAcesso
 x-key: KeyAcesso
     
 ### Verbo GET - listar um
-GET http://localhost:8000/funcionario/10 HTTP/1.1
+GET http://localhost:8000/funcionario/2 HTTP/1.1
 x-token: TokenAcesso
 x-key: KeyAcesso
 
@@ -16,7 +16,7 @@ content-type: application/json
 
 {
     "nome": "Valdir Vinilson",
-    "cpf": "11111111111",
+    "cpf": "11111134111",
     "telefone": "35741269857",
     "senha": "Burzum",
     "matricula": "1478523690",
@@ -30,7 +30,7 @@ x-key: KeyAcesso
 content-type: application/json
 
 {
-    "nome": "Jaiminho Maihento",
+    "nome": "Este homem foi editado",
     "cpf": "22333333999",
     "telefone": "14785201478",
     "senha": "Guittarrrra",
@@ -39,6 +39,6 @@ content-type: application/json
 }
 
 ### Verbo DELETE - deletar
-DELETE http://127.0.0.1:8000/funcionario/3 HTTP/1.1
+DELETE http://127.0.0.1:8000/funcionario/2 HTTP/1.1
 x-token: TokenAcesso
 x-key: KeyAcesso
