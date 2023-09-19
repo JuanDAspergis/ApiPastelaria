@@ -1,6 +1,7 @@
 import db
 import security
 from mod_cliente.ClienteModel import ClienteDB
+from mod_cliente.Cliente import Cliente
 
 from fastapi import Depends
 from fastapi import APIRouter

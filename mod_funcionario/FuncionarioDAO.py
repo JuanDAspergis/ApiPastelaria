@@ -1,6 +1,7 @@
 import db
 import security
 from mod_funcionario.FuncionarioModel import FuncionarioDB
+from mod_funcionario.Funcionario import Funcionario
 
 from fastapi import Depends
 from fastapi import APIRouter

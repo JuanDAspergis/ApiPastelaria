@@ -1,6 +1,7 @@
 import db
 import security
 from mod_produto.ProdutoModel import ProdutoDB
+from mod_produto.Produto import Produto
 
 from fastapi import Depends
 from fastapi import APIRouter
