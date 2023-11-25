@@ -5,4 +5,4 @@ class Produto(BaseModel):
     nome: str
     descricao: str
     valor_unitario: str
-    foto: str = None
+    foto: bytes = None
